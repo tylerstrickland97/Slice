@@ -9,6 +9,10 @@ app.use(express.static(__dirname + '/static'));
 
 const html_dir = __dirname + "/static/templates";
 
+const apiRouter = require('../backend/Routes/APIRoutes');
+app.use(express.json());
+app.use(apiRouter);
+
 // Have Node serve the files for our built React app
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 

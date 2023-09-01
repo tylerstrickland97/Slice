@@ -58,8 +58,8 @@ export default {
         return HTTPClient.get('/current');
     },
 
-    getUserByID: (id) => {
-        return HTTPClient.get('/users/' + id);
+    getUserByUsername: (username) => {
+        return HTTPClient.get('/users/' + username);
     }
 
 };
